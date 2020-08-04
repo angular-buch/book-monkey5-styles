@@ -1,3 +1,5 @@
+> :warning: This CSS Stylesheet is not used in the current BookMonkey Versions (2-4) from the "Angular Buch". 
+
 # book-monkey-css
 
 This repository contains the global stylesheet to be used within the example application "BookMonkey" used in the German [Angular Book](https://angular.buch.com).
