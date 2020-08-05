@@ -1,5 +1,5 @@
 {
-  "name": "book-monkey-css",
+  "name": "book-monkey-styles",
   "version": "0.0.3",
   "description": "A global stylesheet to be used for the application \"BookMonkey\"",
   "files": ["*.css"],
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/angular-buch/book-monkey-css.git"
+    "url": "git+ssh://git@github.com/angular-buch/book-monkey-styles.git"
   },
   "keywords": [
     "BookMonkey",
@@ -21,7 +21,7 @@
   "author": "Angular Buch Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/angular-buch/book-monkey-css/issues"
+    "url": "https://github.com/angular-buch/book-monkey-styles/issues"
   },
-  "homepage": "https://github.com/angular-buch/book-monkey-css#readme"
+  "homepage": "https://github.com/angular-buch/book-monkey-styles#readme"
 }

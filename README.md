@@ -1,6 +1,6 @@
 > :warning: This CSS Stylesheet is not used in the current BookMonkey Versions (2-4) from the "Angular Buch". 
 
-# book-monkey-css
+# book-monkey-styles
 
 This repository contains the global stylesheet to be used within the example application "BookMonkey" used in the German [Angular Book](https://angular.buch.com).
 
@@ -9,7 +9,7 @@ This repository contains the global stylesheet to be used within the example app
 Install the NPM package from the registry:
 
 ```bash
-npm i --save book-monkey-css
+npm i --save book-monkey-styles
 ```
 
 Then you can include the stylesheet in the Angular build process using via the `angular.json` config file:
@@ -27,7 +27,7 @@ Then you can include the stylesheet in the Angular build process using via the `
             /* ... */
             "styles": [
               "src/styles.css",
-              "node_modules/book-monkey-css/styles.css"
+              "node_modules/book-monkey-styles/styles.css"
             ],
             /* ... */
           },
@@ -40,7 +40,7 @@ Then you can include the stylesheet in the Angular build process using via the `
             /* ... */
             "styles": [
               "src/styles.css",
-              "node_modules/book-monkey-css/styles.css"
+              "node_modules/book-monkey-styles/styles.css"
             ],
             /* ... */
           }
@@ -56,5 +56,5 @@ Then you can include the stylesheet in the Angular build process using via the `
 Alternatively you can import the CSS file via `include` in your `styles.css` file:
 
 ```css
-@import '~book-monkey-css/styles.css';
+@import '~book-monkey-styles/styles.css';
 ```
