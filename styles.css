@@ -94,6 +94,14 @@ input {
   padding-right: 2.7em !important;
   border-radius: .3rem;
 }
+input.search {
+  background: url(icons/search.svg) no-repeat scroll calc(100% - 10px) 10px;
+  background-size: 22px 22px;
+}
+input.loading {
+  background: url(icons/loader.svg) no-repeat scroll calc(100% - 10px) 10px;
+  background-size: 22px 22px;
+}
 textarea {
   overflow: auto;
   padding: 1em;
