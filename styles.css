@@ -139,7 +139,7 @@ body { margin: 30px; }
 }
 
 /* Loader Style */
-.loader > span {
+.loader * {
   color: #000000;
   text-align: center;
   font-family: sans-serif;
@@ -147,7 +147,7 @@ body { margin: 30px; }
   position: absolute;
   top: 90px;
 }
-.loader > span:after {
+.loader *:after {
   position: absolute;
   content: "";
   animation: Dots 2s cubic-bezier(0, .39, 1, .68) infinite;
