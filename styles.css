@@ -17,7 +17,7 @@ h1 {
   margin-top: 0em;
 }
 h2 {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
 }
 h3 {
   margin: 10px 0;
@@ -140,6 +140,11 @@ body { margin: 30px; }
   background-color: #46a049 !important;
 }
 
+/* hidden elements */
+.visually-hidden {
+  display: none;
+}
+
 /* Loader Style */
 .loader * {
   color: #000000;
@@ -218,7 +223,6 @@ nav {
   line-height: 1.4em;
   color: rgba(0, 0, 0, 0.87);
   box-sizing: inherit;
-  display: flex;
   margin: 1rem 0em;
   background: #FFFFFF;
   font-weight: normal;
@@ -229,7 +233,11 @@ nav {
   font-size: 1rem;
   margin-top: 0rem;
 }
-nav > a {
+nav ul {
+  display: inline-flex;
+  margin: 0;
+}
+nav a {
   font-size: 1rem;
   box-sizing: inherit;
   position: relative;
@@ -248,18 +256,18 @@ nav > a {
   display: flex;
   align-items: center;
 }
-nav > a:hover {
+nav a:hover {
   cursor: pointer;
   background: rgba(0, 0, 0, 0.03);
   color: rgba(0, 0, 0, 0.95);
 }
-nav > a.active {
+nav a.active {
   background: rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.95);
   font-weight: normal;
   box-shadow: none;
 }
-nav > button {
+nav button {
   margin: 0.5em;
   right: 25px;
   position: absolute;
@@ -274,7 +282,7 @@ button.notification.red::before {
 }
 
 /* Search Component Styles */
-i.icon.loading {
+span.icon.loading {
   text-align: center;
   width: 2.7em;
   position: relative;
@@ -283,19 +291,19 @@ i.icon.loading {
   top: 19px;
   left: -20px;
 }
-i.icon:after {
+span.icon:after {
   position: absolute;
   content: '';
   width: 1.3em;
   font-style: normal;
   height: 1.3em;
 }
-i.icon.star:after {
+span.icon.star:after {
   content: '\2605';
   color: #fbbd08;
   position: relative;
 }
-i.icon.loading:after {
+span.icon.loading:after {
   margin: -.7em 0 0 -.7em;
   -webkit-animation: button-spin .6s linear;
   animation: button-spin .6s linear;
@@ -384,6 +392,7 @@ ul.book-list > li:hover {
   cursor: pointer;
 }
 ul.book-list > li img {
+  min-width: 120px;
   width: 120px;
   height: 150px;
   padding-top: 5px;
