@@ -232,10 +232,7 @@ nav {
   min-height: 2.9em;
   font-size: 1rem;
   margin-top: 0rem;
-}
-nav ul {
-  display: inline-flex;
-  margin: 0;
+  display: flex;
 }
 nav a {
   font-size: 1rem;
@@ -269,8 +266,9 @@ nav a.active {
 }
 nav button {
   margin: 0.5em;
-  right: 25px;
+  right: 30px;
   position: absolute;
+  justify-self: unset;
 }
 
 /* notification button */
