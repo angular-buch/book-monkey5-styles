@@ -116,7 +116,10 @@ textarea {
   max-height: 24em;
 }
 /* Angular form styles for invalid fields */
-input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+fieldset.ng-invalid.ng-touched input,
+fieldset.ng-invalid.ng-touched textarea {
   outline-color: #d01919;
   border-bottom-color: #d01919;
   border-bottom-width: 0.2em;
