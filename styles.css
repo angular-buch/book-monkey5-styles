@@ -582,3 +582,11 @@ form > button[type=submit]:hover {
     transform: rotate(360deg);
   }
 }
+
+/* custom responsive layout */
+@media only screen and (max-width: 460px) {
+  /* move button logout underneath top navbar */
+  nav button {
+    top: 90px;
+  }
+}
