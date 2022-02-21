@@ -74,6 +74,20 @@ button:disabled, a.button:disabled, button:disabled:hover, a.button:disabled:hov
   color: #888888 !important;
 }
 
+/* icon button styles */
+button.arrow-left, a.arrow-left {
+  position: relative;
+  padding-left: 1.9rem;
+}
+button.arrow-left::before, a.arrow-left::before {
+  content:"\A";
+  border-style: solid;
+  border-width: 7px 12px 7px 0;
+  border-color: transparent #444 transparent transparent;
+  position: absolute;
+  left: 0.7rem;
+}
+
 input, textarea {
   box-sizing: inherit;
   background: #FFFFFF;
