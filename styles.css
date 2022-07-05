@@ -286,6 +286,9 @@ nav button {
   position: absolute;
   justify-self: unset;
 }
+nav button:nth-of-type(2) {
+  right: 120px;
+}
 
 /* notification button */
 button.notification::before {
