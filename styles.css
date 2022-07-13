@@ -91,8 +91,8 @@ button.arrow-left::before, a.arrow-left::before {
 input, textarea {
   box-sizing: inherit;
   background: #FFFFFF;
-  border: 1px solid rgba(34,36,38,.15);
-  color: rgba(0,0,0,.87);
+  border: 1px solid rgba(10, 10, 10, .3);
+  color: rgba(0,0,0,.9);
   border-radius: .3rem;
   transition: color .1s ease,border-color .1s ease;
   line-height: 1.2;
@@ -158,11 +158,11 @@ body { margin: 30px; }
   background-color: #d01919 !important;
 }
 .green {
-  background-color: #4CAF50 !important;
+  background-color: #287e2b !important;
   color: #ffffff !important;
 }
 .green:hover {
-  background-color: #46a049 !important;
+  background-color: #096c0d !important;
 }
 
 /* comma separated lists (ul, li) */
@@ -519,11 +519,11 @@ form fieldset input:nth-child(odd) {
 }
 
 form > button[type=submit] {
-  background-color: #4CAF50;
+  background-color: #287e2b;
   color: #fff;
 }
 form > button[type=submit]:hover {
-  background-color: #46a049;
+  background-color: #096c0d;
 }
 
 .error {
