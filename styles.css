@@ -406,7 +406,7 @@ ul.search-results > li > a > p {
   margin-bottom: 0em;
   margin-top: 0;
   font-size: 0.92857143em;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgb(80, 80, 80);
 }
 
 /* BookList Styles */
