@@ -16,7 +16,7 @@ h1 {
   font-size: 2rem;
   margin-top: 0em;
 }
-h2 {
+h2, [role="doc-subtitle"] {
   font-size: 1.6rem;
 }
 h3 {
@@ -447,19 +447,23 @@ ul.book-list > li h3 {
 }
 
 /* BookDetails Styles */
-.details h2 {
+.details > h2 {
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(34,36,38,.15);
 }
-.details h3 {
+.details h2 {
   margin-bottom: 0;
+  font-size: 1.3em;
 }
 .details .header {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
 }
-.details .header h3 {
+.details .header ul {
+  margin: 0;
+}
+.details .header h2 {
   margin-top: 10px;
 }
 .details .header > div {
