@@ -439,7 +439,6 @@ ul.book-list > li:hover {
 ul.book-list > li a {
   text-decoration: none;
   color: inherit;
-  display: contents;
 }
 ul.book-list > li a:hover {
   color: rgba(0,0,0,.8);
