@@ -410,7 +410,8 @@ ul.search-results > li > a > p {
 }
 
 /* BookList Styles */
-ul.book-list > li a {
+ul.book-list > li a,
+ul.book-list > li div {
   display: grid;
   grid-template-columns: minmax(50px, 120px) auto;
   gap: 0px 0px;
@@ -426,7 +427,8 @@ ul.book-list > li a {
   padding: 1em;
   column-gap: 1em;
 }
-ul.book-list > li:last-child a {
+ul.book-list > li:last-child a,
+ul.book-list > li:last-child div {
   border-bottom: none;
 }
 ul.book-list > li:hover {
