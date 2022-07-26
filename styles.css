@@ -487,15 +487,11 @@ ul.book-list > li h3 {
 .details p {
   padding-top: 10px;
 }
-.details .thumbnails {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-between;
-}
-.details .thumbnails img {
+.details img {
   width: 200px;
   height: 250px;
-  padding: 10px;
+  display: block;
+  margin: 1em 0;
 }
 
 /* BookForm Styles */
