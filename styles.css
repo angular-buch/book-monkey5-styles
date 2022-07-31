@@ -26,7 +26,6 @@ h3 {
 p {
   margin: 0em 0em 1em;
   line-height: 1.4em;
-  white-space: pre-wrap;
 }
 
 ul {
@@ -187,11 +186,12 @@ body { margin: 30px; }
 
 /* comma separated lists (ul, li) */
 ul.comma-list {
-  display: inline;
+  display: inline-flex;
   list-style: none;
+  gap: 0.2em;
 }
 ul.comma-list li {
-  display: inline;
+  display: inline-flex;
 }
 ul.comma-list li:after {
   content: ", ";
@@ -516,9 +516,7 @@ ul.book-list > li h3 {
 }
 .details p {
   padding-top: 10px;
-}
-.details p {
-  padding-top: 10px;
+  white-space: pre-wrap;
 }
 .details img {
   width: 200px;
