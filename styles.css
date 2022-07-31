@@ -189,6 +189,7 @@ ul.comma-list {
   display: inline-flex;
   list-style: none;
   gap: 0.2em;
+  flex-wrap: wrap;
 }
 ul.comma-list li {
   display: inline-flex;
