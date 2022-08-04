@@ -645,4 +645,19 @@ form > button[type=submit]:hover {
   nav button {
     top: 90px;
   }
+
+  ul.book-list > li img {
+    grid-area: thumbnail;
+    min-width: 90px;
+    width: 90px;
+    height: 120px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  ul.book-list > li img {
+    grid-area: thumbnail;
+    min-width: 70px;
+    width: 70px;
+    height: 100px;
+  }
 }
