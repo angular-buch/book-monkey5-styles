@@ -48,7 +48,7 @@ button, a.button {
   background: #e0e1e2 none;
   color: rgba(0,0,0,.6);
   font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif;
-  margin: 0 .25em 0 0;
+  margin: .25em .25em 0 0;
   padding: .8em 1.5em;
   text-transform: none;
   text-shadow: none;
@@ -112,7 +112,7 @@ input[type=search] {
   background: url(icons/search.svg) no-repeat scroll calc(100% - 10px) 10px;
   background-size: 22px 22px;
 }
-input.loading {
+input.loading, input.ng-pending {
   background: url(icons/loader.svg) no-repeat scroll calc(100% - 10px) 10px;
   background-size: 22px 22px;
 }
@@ -213,7 +213,7 @@ ul.comma-list li:last-child:after {
   font-family: sans-serif;
   font-size: 16px;
   perspective: 350px;
-  padding-top: 120px;
+  padding-top: 130px;
 }
 .loader:before,.loader:after {
   content: "";
@@ -284,6 +284,7 @@ nav {
   font-size: 1rem;
   margin-top: 0rem;
   display: flex;
+  min-width: 300px;
 }
 nav a {
   font-size: 1rem;
@@ -394,7 +395,7 @@ ul.search-results {
   z-index: 998;
   max-width: calc(100vw - 2rem);
 }
-ul.search-results > li > a {
+ul.search-results > li > a, ul.search-results > li {
   visibility: visible !important;
   white-space: normal;
   text-align: left;
@@ -403,7 +404,7 @@ ul.search-results > li > a {
   background-color: transparent;
   text-decoration: none;
   border-radius: 0.3 0.3 0em 0em;
-  cursor: pointer;
+  cursor: initial;
   display: block;
   overflow: hidden;
   font-size: 1em;
@@ -411,6 +412,9 @@ ul.search-results > li > a {
   color: rgba(0, 0, 0, 0.87);
   line-height: 1.33;
   border-bottom: 1px solid rgba(34, 36, 38, 0.1);
+}
+ul.search-results > li > a {
+  cursor: pointer;
 }
 ul.search-results > li > a:hover {
   background: #F9FAFB;
@@ -501,6 +505,7 @@ ul.book-list > li h3 {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
+  flex-wrap: wrap;
 }
 .details .header ul {
   margin: 0;
@@ -646,11 +651,31 @@ form > button[type=submit]:hover {
     top: 90px;
   }
 
+  h1 {
+    margin-top: 2em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  [role="doc-subtitle"] {
+    font-size: 1.1rem;
+  }
+
   ul.book-list > li img {
     grid-area: thumbnail;
-    min-width: 90px;
-    width: 90px;
-    height: 120px;
+    min-width: 70px;
+    width: 70px;
+    height: 100px;
+  }
+
+  ul.book-list > li > *:first-child {
+    column-gap: 2em;
+  }
+
+  ul.book-list > li > *:first-child > a {
+    column-gap: 2em;
   }
 }
 @media only screen and (max-width: 360px) {
