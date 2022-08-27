@@ -316,13 +316,13 @@ nav a.active {
   font-weight: normal;
   box-shadow: none;
 }
-nav .group {
+nav .actions {
   display: flex;
   position: absolute;
   right: 23px;
   margin: 0.25em 0.75em;
 }
-nav .group button {
+nav .actions button {
   position: relative;
   right: initial;
   top: initial;
@@ -649,7 +649,7 @@ form > button[type=submit]:hover {
 
 /* custom responsive layout */
 @media only screen and (max-width: 610px) {
-  nav .group {
+  nav .actions {
     left: 28px;
     top: 90px;
     margin: 0;
