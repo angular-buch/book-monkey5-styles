@@ -316,14 +316,17 @@ nav a.active {
   font-weight: normal;
   box-shadow: none;
 }
-nav button {
-  margin: 0.5em;
-  right: 30px;
+nav .group {
+  display: flex;
   position: absolute;
-  justify-self: unset;
+  right: 23px;
+  margin-right: 10px;
 }
-nav button:nth-of-type(2) {
-  right: 120px;
+nav .group button {
+  position: relative;
+  right: initial;
+  top: initial;
+  margin-left: 0;
 }
 
 /* notification button */
@@ -645,6 +648,17 @@ form > button[type=submit]:hover {
 }
 
 /* custom responsive layout */
+@media only screen and (max-width: 600px) {
+  nav .group {
+    left: 28px;
+    top: 90px;
+  }
+
+  h1 {
+    margin-top: 2em;
+  }
+}
+
 @media only screen and (max-width: 460px) {
   /* move button logout underneath top navbar */
   nav button {
