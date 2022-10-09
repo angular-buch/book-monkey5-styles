@@ -56,5 +56,5 @@ Then you can include the stylesheet in the Angular build process using via the `
 Alternatively you can import the CSS file via `include` in your `styles.css` file:
 
 ```css
-@import '~book-monkey5-styles/styles.css';
+@import 'book-monkey5-styles/styles.css';
 ```
