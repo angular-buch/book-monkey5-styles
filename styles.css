@@ -398,7 +398,10 @@ ul.search-results {
   z-index: 998;
   max-width: calc(100vw - 2rem);
 }
-ul.search-results > li > a, ul.search-results > li {
+ul.search-results > li:not(:has(>a)) {
+  padding: 0.9em 1.1em;
+}
+ul.search-results > li > a {
   visibility: visible !important;
   white-space: normal;
   text-align: left;
@@ -438,7 +441,9 @@ ul.search-results > li > a > p {
 }
 
 /* BookList Styles */
-ul.book-list > li > *:first-child {
+ul.book-list > li:has(>:not(bm-book-list-item)),
+ul.book-list > li > bm-book-list-item:has(>:not(a)),
+ul.book-list > li > bm-book-list-item > a  {
   display: grid;
   grid-template-columns: minmax(50px, 120px) auto;
   gap: 0px 0px;
@@ -455,43 +460,23 @@ ul.book-list > li > *:first-child {
   column-gap: 1em;
 }
 
-ul.book-list > li > *:first-child > a {
-  display: grid;
-  grid-template-columns: minmax(50px, 120px) auto;
-  gap: 0px 0px;
-  grid-template-areas:
-    "thumbnail ."
-    "thumbnail ."
-    "thumbnail ."
-    "thumbnail ."
-    "thumbnail ."
-    "thumbnail ."
-    "thumbnail .";
-  padding: 1em;
-  column-gap: 1em;
-  grid-column: 1/-1;
-}
-ul.book-list > li:last-child > *:first-child {
-  border-bottom: none;
-}
-
-ul.book-list > li a {
+ul.book-list a {
   text-decoration: none;
   color: inherit;
 }
-ul.book-list > li a:hover {
+ul.book-list a:hover {
   color: rgba(0,0,0,.8);
 }
-ul.book-list > li img {
+ul.book-list img {
   grid-area: thumbnail;
   min-width: 120px;
   width: 120px;
   height: 150px;
 }
-ul.book-list > li h2 {
+ul.book-list h2 {
   margin: 0;
 }
-ul.book-list > li h3 {
+ul.book-list h3 {
   margin-top: 0;
 }
 
@@ -572,6 +557,12 @@ form > button[type=submit] {
 }
 form > button[type=submit]:hover {
   background-color: #096c0d;
+}
+
+/* Safari Fix for Date/Time Picker Styles*/
+input[type='date'], input[type='time'] {
+  min-height: 1.2em;
+  -webkit-appearance: none;
 }
 
 .error {
@@ -678,23 +669,22 @@ form > button[type=submit]:hover {
     font-size: 1.1rem;
   }
 
-  ul.book-list > li img {
+  ul.book-list img {
     grid-area: thumbnail;
     min-width: 70px;
     width: 70px;
     height: 100px;
   }
 
-  ul.book-list > li > *:first-child {
+  ul.book-list > li:has(>:not(bm-book-list-item)),
+  ul.book-list > li > bm-book-list-item:has(>:not(a)),
+  ul.book-list > li > bm-book-list-item > a {
     column-gap: 2em;
-  }
-
-  ul.book-list > li > *:first-child > a {
-    column-gap: 2em;
+    grid-template-columns: 1fr 2fr;
   }
 }
 @media only screen and (max-width: 360px) {
-  ul.book-list > li img {
+  ul.book-list img {
     grid-area: thumbnail;
     min-width: 70px;
     width: 70px;
