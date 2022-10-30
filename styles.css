@@ -160,7 +160,7 @@ fieldset.ng-pending textarea {
 }
 
 
-body { margin: 30px; }
+body { margin: 20px; min-width: 320px; }
 
 .yellow {
   background-color: #fbbd08 !important;
@@ -284,7 +284,7 @@ nav {
   font-size: 1rem;
   margin-top: 0rem;
   display: flex;
-  min-width: 330px;
+  flex-wrap: wrap;
 }
 nav a {
   font-size: 1rem;
@@ -318,15 +318,13 @@ nav a.active {
 }
 nav .actions {
   display: flex;
-  position: absolute;
-  right: 23px;
+  flex-grow: 1;
+  flex-direction: row-reverse;
   margin: 0.25em 0.75em;
+  gap: .5em;
 }
 nav .actions button {
-  position: relative;
-  right: initial;
-  top: initial;
-  margin-left: 0;
+  margin: 0;
 }
 
 /* notification button */
@@ -441,6 +439,9 @@ ul.search-results > li > a > p {
 }
 
 /* BookList Styles */
+.book-list {
+  margin: 0;
+}
 .book-list .list-item  {
   display: grid;
   grid-template-columns: minmax(50px, 120px) auto;
@@ -542,6 +543,9 @@ form fieldset {
   margin: 0;
   padding: 0;
 }
+form fieldset > input:only-child {
+  width: calc(100% - 4em);
+}
 form fieldset > input {
   width: calc(50% - 4em);
 }
@@ -636,29 +640,56 @@ input[type='date'], input[type='time'] {
   }
 }
 
-/* custom responsive layout */
-@media only screen and (max-width: 610px) {
-  nav .actions {
-    left: 28px;
-    top: 90px;
-    margin: 0;
+@media only screen and (max-width: 700px) {
+  nav {
+    display: flex;
+    border: none;
+    box-shadow: none;
+    gap: .5em 0;
+  }
+  nav > a {
+    border: 1px solid rgba(34, 36, 38, 0.15);
+  }
+  nav > a:first-of-type {
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+    border-right: none;
+  }
+  nav > a:last-of-type {
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    border-left: none;
+    margin-right: 2em;
   }
 
-  h1 {
-    margin-top: 2em;
+  nav .actions {
+    margin: 0;
+    gap: .5rem;
+    min-width: 200px;
+  }
+  nav .actions button {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav .actions {
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  nav > a {
+    padding: 0.7em;
+  }
+
+  nav > a:last-of-type {
+    margin-right: 0;
   }
 }
 
 @media only screen and (max-width: 460px) {
   /* move button logout underneath top navbar */
-  nav button {
-    top: 90px;
-  }
-
-  h1 {
-    margin-top: 2em;
-  }
-
   h2 {
     font-size: 1.2em;
   }
@@ -669,8 +700,8 @@ input[type='date'], input[type='time'] {
 
   .book-list img {
     grid-area: thumbnail;
-    min-width: 70px;
-    width: 70px;
+    min-width: 100px;
+    width: 100px;
     height: 100px;
   }
 
@@ -682,8 +713,12 @@ input[type='date'], input[type='time'] {
 @media only screen and (max-width: 360px) {
   .book-list img {
     grid-area: thumbnail;
-    min-width: 70px;
-    width: 70px;
+    min-width: 80px;
+    width: 80px;
     height: 100px;
+  }
+
+  .book-list .list-item {
+    column-gap: 1em;
   }
 }
