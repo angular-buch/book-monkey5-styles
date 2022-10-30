@@ -441,9 +441,7 @@ ul.search-results > li > a > p {
 }
 
 /* BookList Styles */
-ul.book-list > li:has(>:not(bm-book-list-item)),
-ul.book-list > li > bm-book-list-item:has(>:not(a)),
-ul.book-list > li > bm-book-list-item > a  {
+.book-list .list-item  {
   display: grid;
   grid-template-columns: minmax(50px, 120px) auto;
   gap: 0px 0px;
@@ -460,23 +458,23 @@ ul.book-list > li > bm-book-list-item > a  {
   column-gap: 1em;
 }
 
-ul.book-list a {
+.book-list a {
   text-decoration: none;
   color: inherit;
 }
-ul.book-list a:hover {
+.book-list a:hover {
   color: rgba(0,0,0,.8);
 }
-ul.book-list img {
+.book-list img {
   grid-area: thumbnail;
   min-width: 120px;
   width: 120px;
   height: 150px;
 }
-ul.book-list h2 {
+.book-list h2 {
   margin: 0;
 }
-ul.book-list h3 {
+.book-list h3 {
   margin-top: 0;
 }
 
@@ -669,22 +667,20 @@ input[type='date'], input[type='time'] {
     font-size: 1.1rem;
   }
 
-  ul.book-list img {
+  .book-list img {
     grid-area: thumbnail;
     min-width: 70px;
     width: 70px;
     height: 100px;
   }
 
-  ul.book-list > li:has(>:not(bm-book-list-item)),
-  ul.book-list > li > bm-book-list-item:has(>:not(a)),
-  ul.book-list > li > bm-book-list-item > a {
+  .book-list .list-item {
     column-gap: 2em;
     grid-template-columns: 1fr 2fr;
   }
 }
 @media only screen and (max-width: 360px) {
-  ul.book-list img {
+  .book-list img {
     grid-area: thumbnail;
     min-width: 70px;
     width: 70px;
