@@ -1,6 +1,6 @@
 {
   "name": "book-monkey5-styles",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A global stylesheet to be used for the application \"BookMonkey\"",
   "files": [
     "*.css",
