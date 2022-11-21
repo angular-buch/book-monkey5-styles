@@ -2,7 +2,7 @@
 
 This repository contains the global stylesheet to be used within the example application "BookMonkey5" used in the German [Angular Book](https://angular.buch.com).
 
-> :warning: This CSS Stylesheet is not used in the BookMonkey Versions (2-4) from the "Angular Buch".
+> :warning: This CSS Stylesheet is **not** used in the BookMonkey Versions (2-4) of the "Angular Buch".
 
 ## Usage
 
@@ -12,7 +12,14 @@ Install the NPM package from the registry:
 npm i --save book-monkey5-styles
 ```
 
-Then you can include the stylesheet in the Angular build process using via the `angular.json` config file:
+Then you can import the CSS file via `@import` in your `styles.css` file:
+
+```css
+@import 'book-monkey5-styles/styles.css';
+```
+
+
+Alternatively you can include the stylesheet in the Angular build process using via the `angular.json` config file:
 
 ```json
 {
@@ -53,8 +60,4 @@ Then you can include the stylesheet in the Angular build process using via the `
 }
 ```
 
-Alternatively you can import the CSS file via `include` in your `styles.css` file:
 
-```css
-@import 'book-monkey5-styles/styles.css';
-```
